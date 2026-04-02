@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TechConnect</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <span class="navbar-brand">TechConnect</span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="container text-center mt-4">
+        <h1>Bem-vindo</h1>
+        <p>Site simples de tecnologia</p>
+        <button onclick="clicou()" class="btn btn-primary">Clique aqui</button>
+    </div>
+
+    <!-- SERVIÇOS -->
+    <div class="container mt-4">
+        <h3>Serviços</h3>
+
+        <div class="card mt-2 p-2">
+            <p>Vagas de emprego</p>
+        </div>
+
+        <div class="card mt-2 p-2">
+            <p>Cursos online</p>
+        </div>
+
+        <div class="card mt-2 p-2">
+            <p>Networking</p>
+        </div>
+    </div>
+
+    <!-- SOBRE -->
+    <div class="container mt-4">
+        <h3>Sobre</h3>
+        <p>Somos um site simples para conectar pessoas da tecnologia.</p>
+    </div>
+
+    <!-- CONTATO -->
+    <div class="container mt-4">
+        <h3>Contato</h3>
+
+        <input id="nome" class="form-control mt-2" placeholder="Nome">
+        <button onclick="enviar()" class="btn btn-success mt-2">Enviar</button>
+
+        <p id="msg"></p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bg-dark text-white text-center mt-4 p-2">
+        <p>TechConnect 2026</p>
+    </div>
+
+    <!-- JS -->
+    <script>
+        function clicou() {
+            alert("Você clicou!");
+        }
+
+        function enviar() {
+            var nome = document.getElementById("nome").value;
+
+            if (nome == "") {
+                alert("Digite o nome");
+            } else {
+                document.getElementById("msg").innerHTML = "Enviado!";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
